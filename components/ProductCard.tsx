@@ -72,7 +72,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <button
           onClick={handleOpen}
           // Using Tailwind CSS classes for button styling, but you could also use MUI's `variant` and `color` props
-          className="mt-auto w-full bg-gray-900 text-white hover:bg-gray-400 hover:text-gray-900 font-regular py-3 px-4 rounded-lg transition duration-300 ease-in-out flex items-center justify-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="mt-auto w-full bg-[#0A0A0A] text-white hover:bg-gray-400 hover:text-gray-900 font-regular py-3 px-4 rounded-lg transition duration-300 ease-in-out flex items-center justify-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         >
           <span>View Details</span>
         </button>

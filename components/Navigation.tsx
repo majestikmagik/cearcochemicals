@@ -25,7 +25,7 @@ const Navigation: React.FC<NavigationProps> = ({ navLinks, onLinkClick }) => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled || isNavOpen ? 'bg-gray-900 shadow-lg' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled || isNavOpen ? 'bg-[#0A0A0A] shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
@@ -65,7 +65,7 @@ const Navigation: React.FC<NavigationProps> = ({ navLinks, onLinkClick }) => {
 
       {/* Mobile Menu */}
       {isNavOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-700">
+        <div className="md:hidden bg-[#0A0A0A] border-t border-gray-700">
           <div className="px-2 pt-8 pb-3 space-y-7 sm:px-3">
             {navLinks.map((link) => (
               <a
