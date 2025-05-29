@@ -56,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div className="bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-gray-300/50 hover:scale-105">
       <div className="relative h-66 sm:h-70">
         <img
-          src={product.imageUrl || '/images/CEARCO_label.jpg'}
+          src={product.imageUrl || 'images/CEARCO_label.jpg'}
           alt={product.name}
           className="w-full h-full object-cover"
         />

@@ -16,7 +16,7 @@ const ContactFooter: React.FC<ContactFooterProps> = ({ id, onLinkClick }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About CEARCO */}
           <div>
-            <img src="/images/cearco.png" alt="CEARCO Logo" className="h-12 w-62 mb-4" />
+            <img src="images/cearco.png" alt="CEARCO Logo" className="h-12 w-62 mb-4" />
             <p className="text-sm leading-relaxed">
               Handcrafted cleaning solutions since 1981. We provide quality products and services for all your cleaning needs. Located in Richmond, VA.
             </p>

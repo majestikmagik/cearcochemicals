@@ -10,7 +10,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
     <section
       id={id}
       className="relative py-16 md:py-24 bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/ourhistory_bg_01.jpg')" }}
+      style={{ backgroundImage: "url('images/ourhistory_bg_01.jpg')" }}
     >
       <div className="absolute inset-0 bg-black opacity-95"></div>
 

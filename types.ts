@@ -10,4 +10,8 @@ export interface Product {
   description: string;
   imageUrl?: string;
   price?: string; 
+  fullScribe?: string;
+  directions?: string;
+  caution?: string;
+  guarantee?: string;
 }

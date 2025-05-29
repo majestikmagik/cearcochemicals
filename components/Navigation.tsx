@@ -30,7 +30,7 @@ const Navigation: React.FC<NavigationProps> = ({ navLinks, onLinkClick }) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#home" onClick={(e) => { onLinkClick(e, '#home'); setIsNavOpen(false);}}>
-            <img src="/images/cearco.png" alt="CEARCO Logo" className="h-12 w-62" />
+            <img src="images/cearco.png" alt="CEARCO Logo" className="h-12 w-62" />
             </a>
           </div>
           
