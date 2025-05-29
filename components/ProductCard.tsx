@@ -110,10 +110,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             Richmond, Virginia.
           </p>
 
-          <p className="mb-4">
-            cearcochemicals@gmail.com
-            <br />
-            <FaInstagram className="space-x-2" /> cearco_chemicals
+          <p className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href="mailto:cearcochemicals@gmail.com" className="text-gray-700 hover:text-gray-900 hover:underline">
+              cearcochemicals@gmail.com
+            </a>
+            <a 
+              href="https://www.instagram.com/cearco_chemicals" // You might want to use a dynamic URL if available
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center text-gray-700 hover:text-gray-900 hover:underline"
+            >
+              <FaInstagram aria-hidden="true" className="mr-1.5" /> {/* Icon is decorative, mr-1.5 for spacing */}
+              cearco_chemicals
+            </a>
           </p>
         </DialogContent>
         <DialogActions>

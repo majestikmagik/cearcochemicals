@@ -66,7 +66,7 @@ const Navigation: React.FC<NavigationProps> = ({ navLinks, onLinkClick }) => {
       {/* Mobile Menu */}
       {isNavOpen && (
         <div className="md:hidden bg-gray-900 border-t border-gray-700">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-8 pb-3 space-y-7 sm:px-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
