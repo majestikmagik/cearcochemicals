@@ -1,0 +1,5 @@
+{
+  "name": "CEARCO Chemicals Replica",
+  "description": "A React and Tailwind CSS application mimicking the CEARCO website, showcasing their cleaning products and company history. This application provides a modern user interface for browsing products and learning about the company.",
+  "requestFramePermissions": []
+}
