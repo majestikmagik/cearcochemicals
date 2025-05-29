@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog'; 
+import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions'; 
+import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 
 import { FaInstagram } from 'react-icons/fa'; // Assuming IGLogo is still needed for modal content
@@ -85,7 +85,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <DialogContent dividers>
           <p className="mb-4">{product.description}</p>
           {product.fullScribe && <p className="mb-4">{product.fullScribe}</p>}
-          
+
           {product.directions && (
             <p className="mb-4">
               <b>Directions:</b> {product.directions}
@@ -114,10 +114,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <a href="mailto:cearcochemicals@gmail.com" className="text-gray-700 hover:text-gray-900 hover:underline">
               cearcochemicals@gmail.com
             </a>
-            <a 
+            <a
               href="https://www.instagram.com/cearco_chemicals" // You might want to use a dynamic URL if available
-              target="_blank" 
-              rel="noopener noreferrer" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center text-gray-700 hover:text-gray-900 hover:underline"
             >
               <FaInstagram aria-hidden="true" className="mr-1.5" /> {/* Icon is decorative, mr-1.5 for spacing */}
@@ -127,7 +127,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </DialogContent>
         <DialogActions>
           <ThemeProvider theme={theme}>
-            <Button onClick={handleClose} className="text-gray-900">Close</Button>
+            <Button onClick={handleClose} sx={{ color: '#111827' }}>
+              Close
+            </Button>
           </ThemeProvider>
         </DialogActions>
       </Dialog>
