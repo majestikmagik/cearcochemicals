@@ -12,10 +12,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative py-16 md:py-24 bg-cover bg-center"
-      style={{ backgroundImage: "url('images/ourhistory_bg_01.jpg')" }}
-    >
-      <div className="absolute inset-0 bg-black opacity-95"></div>
+      className="relative py-16 md:py-24 bg-cover bg-center">
+      <div className="absolute inset-0 bg-black"></div>
 
       {/* Content needs to be relatively positioned to sit on top of the overlay */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">

@@ -15,10 +15,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
       {/* Background Image Layer */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('images/Black_Background.png')" }}
+        style={{ backgroundImage: "url('images/ourhistory_bg_01.jpg')" }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
       </div>
 
       {/* Content Layer */}

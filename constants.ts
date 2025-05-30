@@ -10,12 +10,12 @@ export const NAV_LINKS: NavLinkItem[] = [
 export const PRODUCTS_DATA: Product[] = [
   {
     id: "1",
-    name: "Freedom 1 Degreaser",
-    description: "Freedom 1 Degreaser / Tire Wash & Prep is a powerful concentrated liquid detergent that can be used in a variety of cleaning applications, including the cleaning of tires and fenderwells during detailing of personal vehicles.",
-    imageUrl: "images/freedom_degreaserlabel.jpg",
+    name: "Freedom 1 Degreaser / Tire Prep",
+    description: "Freedom 1 Degreaser / Tire Prep is a powerful concentrated liquid detergent that can be used in a variety of cleaning applications, including the cleaning of tires and fenderwells during detailing of personal vehicles.",
+    imageUrl: "images/freedom1_combo.jpg",
     contact: "Contact for pricing",
     fullScribe: "The product is also widely used in truck washing, restaurant hood cleaning, heavy equipment cleaning and general degreasing.",
-    subDescription: "Freedom 1 Tire Wash & Prep",
+    subDescription: "Freedom 1 Tire Prep",
     directions: "Apply Freedom 1 using a pressure washer or hand sprayer. Dilute 1 part Freedom 1 with 10-20 parts water, depending on the level of cleaning required. Apply the solution to the surface, allow it to dwell for a few minutes, and then rinse thoroughly with water.",
   },
   {
