@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
         style={{ backgroundImage: "url('images/ourhistory_bg_01.jpg')" }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-75"></div>
+        <div className="absolute inset-0 bg-black opacity-55"></div>
       </div>
 
       {/* Content Layer */}
