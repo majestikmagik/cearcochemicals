@@ -9,14 +9,16 @@ import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 
 import { FaInstagram } from 'react-icons/fa'; // Assuming IGLogo is still needed for modal content
+import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 interface Product {
   id: string;
   name: string;
   description: string;
   imageUrl: string;
-  price: string;
+  contact: string;
   fullScribe?: string;
+  subDescription?: string;
   directions?: string;
   caution?: string;
   guarantee?: string;
@@ -43,6 +45,7 @@ const theme = createTheme({
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [open, setOpen] = useState(false);
+  const [cardRef, cardIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
 
   const handleOpen = () => {
     setOpen(true);
@@ -53,16 +56,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-gray-300/50 hover:scale-105">
+    <div
+      ref={cardRef}
+      className={`bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-gray-300/50 hover:scale-105 fade-in-section ${cardIsVisible ? 'is-visible' : ''}`}
+    >
       <div className="relative h-66 sm:h-70">
         <img
           src={product.imageUrl || 'images/CEARCO_label.jpg'}
           alt={product.name}
           className="w-full h-full object-cover"
         />
-        {product.price && (
+        {product.contact && (
           <span className="absolute top-2 right-2 bg-gray-200 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-            {product.price}
+           <a href="#contact">{product.contact}</a>
           </span>
         )}
       </div>
@@ -85,6 +91,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <DialogContent dividers>
           <p className="mb-4">{product.description}</p>
           {product.fullScribe && <p className="mb-4">{product.fullScribe}</p>}
+
+          {product.subDescription && (
+            <p className="mb-4">
+              <b>Also try:</b> {product.subDescription}
+            </p>
+          )}
 
           {product.directions && (
             <p className="mb-4">

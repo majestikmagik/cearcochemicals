@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 
 interface HeroSectionProps {
@@ -7,6 +8,8 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
+  const [contentRef, contentIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+
   return (
     <section id={id} className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
       {/* Background Image Layer */}
@@ -19,8 +22,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 p-6 md:p-12 max-w-3xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+      <div
+        ref={contentRef}
+        className={`relative z-10 p-6 md:p-12 max-w-3xl mx-auto fade-in-section ${contentIsVisible ? 'is-visible' : ''}`}
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg ">
           This isn't your powdered box drum kit that you mix yourself
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 drop-shadow-md">

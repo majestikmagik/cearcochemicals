@@ -1,11 +1,14 @@
 
 import React from 'react';
+import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 interface AboutSectionProps {
   id: string;
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
+  const [contentRef, contentIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+
   return (
     <section
       id={id}
@@ -16,9 +19,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
 
       {/* Content needs to be relatively positioned to sit on top of the overlay */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-
-
-        <div className="parallax mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+        <div
+          ref={contentRef}
+          className={`parallax mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl fade-in-section ${contentIsVisible ? 'is-visible' : ''}`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Our History
           </h2>

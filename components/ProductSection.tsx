@@ -3,17 +3,21 @@ import React from 'react';
 import { Product } from '../types';
 import { PRODUCTS_DATA } from '../constants';
 import ProductCard from './ProductCard';
+import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 
 interface ProductSectionProps {
   id: string;
 }
 
 const ProductSection: React.FC<ProductSectionProps> = ({ id }) => {
+  const [introRef, introIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+  const [moreInfoRef, moreInfoIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.1, triggerOnce: true });
+
   return (
     <section id={id} className="py-16 md:py-24 bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('images/Black_Background.png')" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
+        <div ref={introRef} className={`text-center mb-12 md:mb-16 fade-in-section ${introIsVisible ? 'is-visible' : ''}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Premium Products
           </h2>
@@ -28,7 +32,10 @@ const ProductSection: React.FC<ProductSectionProps> = ({ id }) => {
           ))}
         </div>
 
-        <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl text-gray-700">
+        <div
+          ref={moreInfoRef}
+          className={`bg-white p-8 md:p-12 rounded-xl shadow-xl text-gray-700 fade-in-section ${moreInfoIsVisible ? 'is-visible' : ''}`}
+        >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center" style={{ fontFamily: "'AMCAP Eternal', serif" }}>
             More Than Just Chemicals
           </h3>
