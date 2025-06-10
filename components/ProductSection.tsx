@@ -10,7 +10,7 @@ interface ProductSectionProps {
 }
 
 const ProductSection: React.FC<ProductSectionProps> = ({ id }) => {
-  const [introRef, introIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.3, triggerOnce: true });
+  const [introRef, introIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.2, triggerOnce: true });
   const [moreInfoRef, moreInfoIsVisible] = useScrollFadeIn<HTMLDivElement>({ threshold: 0.1, triggerOnce: true });
 
   return (
